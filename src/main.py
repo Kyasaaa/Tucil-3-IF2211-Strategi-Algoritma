@@ -45,7 +45,7 @@ Puzzle = ps.PuzzleSolver()
 
 if (opt == 1):
     filename = input("Please input the file name: ")
-    path = "./test/" + filename
+    path = "../test/" + filename
     file = open(path, 'r')
     for line in file.readlines():
         Puzzle.puzzle.append([int (x) for x in line.split()])

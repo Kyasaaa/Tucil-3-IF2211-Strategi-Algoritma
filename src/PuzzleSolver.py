@@ -79,11 +79,11 @@ class PuzzleSolver:
         while(not pq.is_empty()):
             curCost, level, curPuzzle, curSolution = pq.dequeue()
             self.visited.append(curPuzzle)
-            self.total += 1
+            self.total_moves += 1
 
             if (curCost == 0):
                 self.solution_moves = curSolution
-                self.total = level
+                self.total_moves = level
 
                 return time() - start
 
@@ -105,7 +105,7 @@ class PuzzleSolver:
     def generateMoves(self):
         print("Please wait while we generating every move...\n")
         sleep(2)
-        print(f"Total moves: {self.total}\n")
+        print(f"Total moves: {self.total_moves}\n")
         sleep(1)
         print("Initial Puzzle: \n")
         for i in range(4):
